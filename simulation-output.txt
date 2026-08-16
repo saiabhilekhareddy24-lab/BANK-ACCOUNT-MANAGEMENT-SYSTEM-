@@ -1,0 +1,62 @@
+========================================
+     BANK ACCOUNT MANAGEMENT SYSTEM
+========================================
+
+Account Holder : Your Name
+Account Number : 1234567890
+Initial Balance: ₹10000
+
+----------------------------------------
+Transaction 1
+----------------------------------------
+
+Enter Amount: 5000
+
+Operation: Deposit
+
+Output:
+₹5000 deposited successfully.
+
+Updated Balance: ₹15000
+
+
+----------------------------------------
+Transaction 2
+----------------------------------------
+
+Enter Amount: 3000
+
+Operation: Withdraw
+
+Output:
+₹3000 withdrawn successfully.
+
+Updated Balance: ₹12000
+
+
+----------------------------------------
+Transaction 3
+----------------------------------------
+
+Enter Amount: 20000
+
+Operation: Withdraw
+
+Output:
+Insufficient balance.
+
+Current Balance: ₹12000
+
+
+----------------------------------------
+Transaction 4
+----------------------------------------
+
+Operation: Check Balance
+
+Output:
+Current balance: ₹12000
+
+========================================
+          END OF SIMULATION
+========================================
