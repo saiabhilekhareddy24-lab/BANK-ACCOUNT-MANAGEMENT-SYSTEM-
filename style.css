@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 450px;
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #2a5298;
+    margin-bottom: 15px;
+}
+
+.account,
+.transaction {
+    background-color: #f4f7fb;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+}
+
+.account p {
+    margin: 10px 0;
+}
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 15px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #1e3c72;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a5298;
+}
+
+#message {
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    color: #1e3c72;
+}
