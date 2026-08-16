@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank Account Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Bank Account Management System</h1>
+
+    <div class="account">
+        <h2>Account Details</h2>
+
+        <p>
+            <strong>Account Holder:</strong>
+            <span id="accountHolder">Your Name</span>
+        </p>
+
+        <p>
+            <strong>Account Number:</strong>
+            <span id="accountNumber">1234567890</span>
+        </p>
+
+        <p>
+            <strong>Balance:</strong>
+            ₹<span id="balance">10000</span>
+        </p>
+    </div>
+
+    <div class="transaction">
+
+        <h2>Bank Transactions</h2>
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="Enter amount"
+        >
+
+        <button onclick="depositMoney()">
+            Deposit
+        </button>
+
+        <button onclick="withdrawMoney()">
+            Withdraw
+        </button>
+
+        <button onclick="displayBalance()">
+            Check Balance
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+</div>
+
+<script>
+
+let balance = 10000;
+
+function depositMoney() {
+
+    let amount = Number(
+        document.getElementById("amount").value
+    );
+
+    if (amount <= 0 || isNaN(amount)) {
+
+        document.getElementById("message").innerText =
+            "Invalid deposit amount.";
+
+        return;
+    }
+
+    balance += amount;
+
+    document.getElementById("balance").innerText =
+        balance;
+
+    document.getElementById("message").innerText =
+        "₹" + amount + " deposited successfully.";
+
+    document.getElementById("amount").value = "";
+}
+
+function withdrawMoney() {
+
+    let amount = Number(
+        document.getElementById("amount").value
+    );
+
+    if (amount <= 0 || isNaN(amount)) {
+
+        document.getElementById("message").innerText =
+            "Invalid withdrawal amount.";
+
+        return;
+    }
+
+    if (amount > balance) {
+
+        document.getElementById("message").innerText =
+            "Insufficient balance.";
+
+        return;
+    }
+
+    balance -= amount;
+
+    document.getElementById("balance").innerText =
+        balance;
+
+    document.getElementById("message").innerText =
+        "₹" + amount + " withdrawn successfully.";
+
+    document.getElementById("amount").value = "";
+}
+
+function displayBalance() {
+
+    document.getElementById("message").innerText =
+        "Current balance: ₹" + balance;
+}
+
+</script>
+
+</body>
+</html>
